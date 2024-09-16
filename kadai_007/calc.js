@@ -1,22 +1,22 @@
-let num = Math.floor(Math.random()*16) ;
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+let num =getRandomInt(1, 100);
 
-if (num ===3 || num ===6 || num ===9 || num ===12 || num === 15) {
+if (num % 3 === 0 ) {
     console.log('3の倍数です');
 }
 
-else if (num === 5 || num === 10 || num ===15 ) {
+else if (num % 5 === 0 ) {
     console.log('5の倍数です');
 }
 
-else if (num === 15)  {
+else if (num % 3 ===0 && num % 5 ===0 )  {
     console.log('3と5の倍数です');
 }
 
-else if (num ===0 ) {
-    console.log=(1);
-}
-
-else 
-{
+else {
     console.log(num);   
 }
+
